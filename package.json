@@ -7,7 +7,7 @@
     "lint": "eslint --ext json,js,tsx,ts ./src ./test",
     "test": "jest --coverage --verbose",
     "test:coverage": "npm test && open coverage/lcov-report/index.html",
-    "server:timeserver": "node build/src/index.js"
+    "start:server:dev": "NODE_ENV=development node build/src/index.js"
   },
   "author": {
     "name": "Arun Sivasankaran",

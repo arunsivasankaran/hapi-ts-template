@@ -9,7 +9,6 @@
 - [ ] tracing
 - [ ] logging
 - [ ] sentry?
-- [ ] 
 
 ```
 // run server
