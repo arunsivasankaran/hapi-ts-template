@@ -1,9 +1,20 @@
-[Time Server Implementation](./src/3_time-zone)
+# Hapi TS Template
+
+## TODO
+
+- [ ] auto reload on change
+- [ ] layered folder structure
+- [ ] checklist for https://12factor.net/
+- [ ] postgres and redis
+- [ ] tracing
+- [ ] logging
+- [ ] sentry?
+- [ ] 
 
 ```
 // run server
 npm run build // if have not already
-node build/src/3_time-zone/index.js
+node build/src/index.js
 // OR
 npm run server:timeserver
 ```
