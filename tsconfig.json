@@ -6,11 +6,16 @@
         "module": "commonjs",
         "target": "ES2018",
         "sourceMap": true,
+        "sourceRoot": "/",
+        "inlineSources": true,
         "noErrorTruncation": true,
         "forceConsistentCasingInFileNames": true,
         "noImplicitReturns": true,
         "incremental": true,
         "pretty": true,
+        "skipLibCheck": true,
+        "resolveJsonModule": true,
+        "esModuleInterop": true
     },
     "exclude": ["node_modules"],
 }
