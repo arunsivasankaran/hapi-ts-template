@@ -8,7 +8,8 @@
 - [ ] postgres and redis
 - [ ] tracing
 - [ ] logging
-- [ ] sentry?
+- [ ] exception tracking
+- [ ] code coverage badge
 
 ```
 // run server
