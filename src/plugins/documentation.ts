@@ -1,6 +1,6 @@
-import Inert = require('@hapi/inert')
-import Vision = require('@hapi/vision')
-import HapiSwagger = require('hapi-swagger')
+import * as Inert from '@hapi/inert'
+import * as Vision from '@hapi/vision'
+import * as HapiSwagger from 'hapi-swagger'
 
 const options = {
     info: {

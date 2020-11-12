@@ -12,6 +12,8 @@ module.exports =  {
   parserOptions: {
     project: './tsconfig.json',
     tsconfigRootDir: __dirname,
+    ecmaVersion:  2018,
+    sourceType:  'module',
   },
   extends:  [
     'eslint:recommended',
@@ -20,15 +22,12 @@ module.exports =  {
     'prettier/@typescript-eslint',
     'plugin:prettier/recommended',
   ],
-   parserOptions:  {
-    ecmaVersion:  2018,
-    sourceType:  'module',
-  },
   rules:  {
     'no-use-before-define': 'off',
     '@typescript-eslint/no-use-before-define': ['error', { functions: false, classes: true }],
     "no-unused-vars": "off",
     "@typescript-eslint/no-unused-vars": ["error", { "argsIgnorePattern": "^_" }],
     'no-return-await': ["error"],
+    "@typescript-eslint/no-floating-promises": ["error"]
   },
 }

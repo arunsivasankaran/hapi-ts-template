@@ -1,7 +1,7 @@
 import * as Hapi from '@hapi/hapi'
-import * as _ from 'lodash'
-import * as Joi from '@hapi/joi'
-import * as MomentTz from 'moment-timezone'
+import _ from 'lodash'
+import Joi from 'joi'
+import MomentTz from 'moment-timezone'
 
 export const routes = {
     method: 'GET',

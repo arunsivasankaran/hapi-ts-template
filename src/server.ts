@@ -1,5 +1,6 @@
 import * as Hapi from '@hapi/hapi'
-import Joi = require('@hapi/joi')
+import * as Joi from 'joi'
+import { Conf } from './conf'
 
 import { SwaggerDocs } from './plugins/documentation'
 
@@ -7,7 +8,7 @@ import { routes } from './routes/time'
 
 export async function init(): Promise<Hapi.Server> {
     const server = Hapi.server({
-        port: '3000',
+        port: Conf.appPort,
         host: 'localhost',
     })
 
