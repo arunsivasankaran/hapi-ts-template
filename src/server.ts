@@ -1,5 +1,5 @@
 import * as Hapi from '@hapi/hapi'
-import Joi = require('@hapi/joi')
+import * as Joi from 'joi'
 
 import { SwaggerDocs } from './plugins/documentation'
 

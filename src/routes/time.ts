@@ -1,6 +1,6 @@
 import * as Hapi from '@hapi/hapi'
 import * as _ from 'lodash'
-import * as Joi from '@hapi/joi'
+import * as Joi from 'joi'
 import * as MomentTz from 'moment-timezone'
 
 export const routes = {
