@@ -19,7 +19,6 @@
     "@hapi/inert": "^6.0.1",
     "@hapi/vision": "^6.0.0",
     "@types/bluebird": "^3.5.30",
-    "benchmark": "^2.1.4",
     "bluebird": "^3.7.2",
     "convict": "^6.0.0",
     "hapi-swagger": "^14.0.0",
