@@ -1,16 +1,16 @@
-import * as Hapi from '@hapi/hapi'
-import _ from 'lodash'
-import Joi from 'joi'
-import MomentTz from 'moment-timezone'
+import * as Hapi from '@hapi/hapi';
+import Joi from 'joi';
+import _ from 'lodash';
+import MomentTz from 'moment-timezone';
 
 export const routes = {
     method: 'GET',
     path: '/current-time',
     options: {
         handler: async (_request: Hapi.Request, _h: Hapi.ResponseToolkit): Promise<string> => {
-            const timezone = _request.query.timezone as string
-            const now = MomentTz().tz(timezone).format('HH:mm:ss')
-            return now.toString()
+            const timezone = _request.query.timezone as string;
+            const now = MomentTz().tz(timezone).format('HH:mm:ss');
+            return now.toString();
         },
         description: 'returns the current time',
         notes: [
@@ -26,4 +26,4 @@ export const routes = {
         },
         tags: ['api'],
     },
-}
+};
