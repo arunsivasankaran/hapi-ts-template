@@ -3,7 +3,7 @@ import Joi from 'joi';
 import _ from 'lodash';
 import MomentTz from 'moment-timezone';
 
-export const routes = {
+export const timeRoutes = {
     method: 'GET',
     path: '/current-time',
     options: {

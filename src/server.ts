@@ -4,7 +4,8 @@ import * as Joi from 'joi';
 import { Conf } from './conf';
 import { SwaggerDocs } from './plugins/documentation';
 import { HealthCHeckPlugin } from './plugins/health';
-import { routes } from './routes/time';
+import { headerRoutes } from './routes/header';
+import { timeRoutes } from './routes/time';
 
 export async function init(): Promise<Hapi.Server> {
     const server = Hapi.server({
@@ -17,7 +18,8 @@ export async function init(): Promise<Hapi.Server> {
 
     server.validator(Joi);
 
-    server.route(routes);
+    server.route(timeRoutes);
+    server.route(headerRoutes);
 
     return server;
 }
