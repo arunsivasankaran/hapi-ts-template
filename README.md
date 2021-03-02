@@ -27,5 +27,5 @@ Example curl request
 curl -X GET "http://localhost:3000/current-time?timezone=America%2FLos_Angeles" -H "accept: application/json"
 ```
 Notes
-1. The server exposes a single endpoint at `/current-time`. 
+1. The server exposes a single endpoint at `/current-time`.
 2. The endpoint takes an optional query param `timezone`. The server uses a default value of `America/Los_Angeles` if no timezone is provided

@@ -1,33 +1,49 @@
-module.exports =  {
-  env: {
-      node: true,
-      jest: true,
-  },
-  globals: {
-    jasmine: 'readonly',
-    spyOn: 'readonly',
-    fail: 'readonly',
-  },
-  parser:  '@typescript-eslint/parser',
-  parserOptions: {
-    project: './tsconfig.json',
-    tsconfigRootDir: __dirname,
-    ecmaVersion:  2018,
-    sourceType:  'module',
-  },
-  extends:  [
-    'eslint:recommended',
-    'plugin:@typescript-eslint/eslint-recommended',
-    'plugin:@typescript-eslint/recommended',
-    'prettier/@typescript-eslint',
-    'plugin:prettier/recommended',
-  ],
-  rules:  {
-    'no-use-before-define': 'off',
-    '@typescript-eslint/no-use-before-define': ['error', { functions: false, classes: true }],
-    "no-unused-vars": "off",
-    "@typescript-eslint/no-unused-vars": ["error", { "argsIgnorePattern": "^_" }],
-    'no-return-await': ["error"],
-    "@typescript-eslint/no-floating-promises": ["error"]
-  },
-}
+module.exports = {
+    env: {
+        node: true,
+        jest: true,
+    },
+    extends: [
+        'eslint:recommended',
+        'plugin:@typescript-eslint/eslint-recommended',
+        'plugin:@typescript-eslint/recommended',
+        'prettier/@typescript-eslint',
+        'prettier',
+        'plugin:prettier/recommended',
+    ],
+    parser: '@typescript-eslint/parser',
+    parserOptions: {
+        project: './tsconfig.eslint.json',
+        ecmaVersion: 2018,
+        sourceType: 'module',
+        extraFileExtensions: ['.json'],
+    },
+    plugins: ['prettier', 'import'],
+    rules: {
+        'prettier/prettier': 'error',
+        '@typescript-eslint/no-floating-promises': ['error'],
+        'no-unused-vars': 'off',
+        '@typescript-eslint/no-unused-vars': ['error', { argsIgnorePattern: '^_' }],
+        indent: ['error', 4],
+        'no-return-await': ['error'],
+        'import/order': [
+            'error',
+            {
+                groups: ['builtin', 'external', 'parent', 'sibling', 'index'],
+                pathGroups: [
+                    {
+                        pattern: '~/**',
+                        group: 'external',
+                        position: 'after',
+                    },
+                ],
+                'newlines-between': 'always',
+                alphabetize: {
+                    order: 'asc',
+                    caseInsensitive: false,
+                },
+            },
+        ],
+        'import/no-cycle': 2,
+    },
+};

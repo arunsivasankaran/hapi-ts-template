@@ -1,4 +1,4 @@
-import Convict from 'convict'
+import Convict from 'convict';
 
 export enum AppEnvironment {
     Test = 'test',
@@ -20,9 +20,9 @@ const appConfig = Convict({
         default: 3000,
         env: 'PORT',
     },
-})
+});
 
-appConfig.validate({ allowed: 'strict' })
+appConfig.validate({ allowed: 'strict' });
 
-export const Conf = appConfig.getProperties()
-export const Env = (Conf.env as unknown) as AppEnvironment
+export const Conf = appConfig.getProperties();
+export const Env = (Conf.env as unknown) as AppEnvironment;
