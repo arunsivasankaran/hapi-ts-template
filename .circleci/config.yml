@@ -1,4 +1,8 @@
-version: 2
+version: 2.1
+
+orbs:
+  sonarcloud: sonarsource/sonarcloud@1.0.2
+
 jobs:
   lint-build-test:
     docker:
@@ -9,8 +13,11 @@ jobs:
       - run: yarn lint
       - run: yarn build
       - run: yarn test
+      - sonarcloud/scan
+
 workflows:
   version: 2
   main-workflow:
     jobs:
-      - lint-build-test
+      - lint-build-test:
+          context: SonarCloud
